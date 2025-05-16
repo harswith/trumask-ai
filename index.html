@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TruMask AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #fff;
+      color: #b71c1c;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #b71c1c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #880e0e;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 4px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      border-top: 2px solid #b71c1c;
+      border-bottom: 2px solid #b71c1c;
+      animation: slideIn 1s ease-in-out;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      padding: 15px 30px;
+      color: #b71c1c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #b71c1c;
+      color: white;
+      transform: scale(1.1);
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      border-top: 3px solid #b71c1c;
+      margin-top: 40px;
+      font-weight: 600;
+      color: #880e0e;
+    }
+
+    ul,
+    ol {
+      margin-left: 20px;
+      margin-top: 10px;
+      color: #880e0e;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>TruMask AI</h1>
+    <p>The Future of Artificial Intelligence</p>
+  </header>
+
+  <nav>
+    <a href="#" class="active" onclick="showTab(event, 'about')">About</a>
+    <a href="#" onclick="showTab(event, 'features')">Features</a>
+    <a href="#" onclick="showTab(event, 'technology')">Technology</a>
+    <a href="#" onclick="showTab(event, 'roadmap')">Roadmap</a>
+    <a href="#" onclick="showTab(event, 'developer')">Developer</a>
+    <a href="#" onclick="showTab(event, 'gallery')">Gallery</a>
+    <a href="#" onclick="showTab(event, 'faq')">FAQ</a>
+    <a href="#" onclick="showTab(event, 'contact')">Contact</a>
+  </nav>
+
+  <section id="about" class="tab-content active">
+    <h2>About TruMask AI</h2>
+    <p>
+      TruMask AI is a cutting-edge artificial intelligence project designed to blend human and digital understanding. We
+      prioritize security, personalization, and true intelligent interaction with a futuristic edge.
+    </p>
+  </section>
+
+  <section id="features" class="tab-content">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Real-time emotional recognition</li>
+      <li>Adaptive decision making</li>
+      <li>Quantum-safe encryption layers</li>
+      <li>Multi-language support with natural fluency</li>
+    </ul>
+  </section>
+
+  <section id="technology" class="tab-content">
+    <h2>Core Technology</h2>
+    <p>
+      Powered by deep neural networks, edge computing, and hybrid cloud services, TruMask AI sets a new benchmark in how
+      machines understand the world.
+    </p>
+  </section>
+
+  <section id="roadmap" class="tab-content">
+    <h2>Development Roadmap</h2>
+    <ol>
+      <li>Q2 2025: Alpha release</li>
+      <li>Q3 2025: Public beta</li>
+      <li>Q1 2026: Full product launch</li>
+      <li>Q2 2026: Expansion to wearables & IoT</li>
+    </ol>
+  </section>
+
+  <section id="developer" class="tab-content">
+    <h2>Developer</h2>
+    <p>
+      TruMask AI is the independent creation of <strong>Harswith Buchireddy</strong>, a passionate innovator and developer
+      building the future of AI one line of code at a time.
+    </p>
+  </section>
+
+  <section id="gallery" class="tab-content">
+    <h2>Visual Gallery</h2>
+    <p>[Futuristic UI mockups, 3D renders, and prototype interfaces would go here]</p>
+  </section>
+
+  <section id="faq" class="tab-content">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q:</strong> Is TruMask AI open source?<br /><strong>A:</strong> Core modules will be available to the
+      community after launch.</p>
+    <p><strong>Q:</strong> Will it work offline?<br /><strong>A:</strong> Yes, limited functions will run via local AI
+      agents.</p>
+  </section>
+
+  <section id="contact" class="tab-content">
+    <h2>Contact Us</h2>
+    <p>Email: contact@trumask.ai<br />Phone: (555) 123-4567<br />Follow us on social media: @TruMaskAI</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TruMask AI. Developed solely by Harswith Buchireddy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showTab(event, tabId) {
+      event.preventDefault();
+
+      // Remove active class from all links
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+
+      // Add active class to clicked tab
+      event.currentTarget.classList.add('active');
+
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+
+      // Show selected tab
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
